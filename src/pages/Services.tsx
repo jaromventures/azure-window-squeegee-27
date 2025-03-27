@@ -30,7 +30,7 @@ const Services = () => {
       title: "Commercial Window Cleaning",
       description: "Professional window cleaning services for businesses of all sizes, from small offices to large commercial buildings.",
       icon: <Building size={32} />,
-      imageSrc: "https://images.unsplash.com/photo-1483058712412-4245e9b90334?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=5760&q=80",
+      imageSrc: "https://images.unsplash.com/photo-1504893524553-b855bce32c67?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3873&q=80",
       link: "/booking",
       details: [
         "Regular maintenance contracts",
@@ -44,7 +44,7 @@ const Services = () => {
       title: "Pressure Washing",
       description: "Refresh your property's exterior surfaces with our professional pressure washing services.",
       icon: <Droplets size={32} />,
-      imageSrc: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3506&q=80",
+      imageSrc: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=7360&q=80",
       link: "/booking",
       details: [
         "Deck and patio cleaning",
@@ -58,7 +58,7 @@ const Services = () => {
       title: "Gutter Cleaning",
       description: "Prevent water damage and maintain your home's integrity with our thorough gutter cleaning service.",
       icon: <Wind size={32} />,
-      imageSrc: "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=7372&q=80",
+      imageSrc: "https://images.unsplash.com/photo-1504893524553-b855bce32c67?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3873&q=80",
       link: "/booking",
       details: [
         "Removal of leaves and debris",
@@ -78,7 +78,7 @@ const Services = () => {
         <Hero 
           title="Our Services" 
           subtitle="Professional window cleaning and exterior maintenance services for the Lake Tahoe area" 
-          backgroundImage="https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3506&q=80"
+          backgroundImage="https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=7360&q=80"
           showCta={false}
           isHome={false}
         />

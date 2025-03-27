@@ -15,7 +15,7 @@ const Booking = () => {
         <Hero 
           title="Book Your Service" 
           subtitle="Schedule a window cleaning appointment with our professional team" 
-          backgroundImage="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=7372&q=80"
+          backgroundImage="https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3648&q=80"
           showCta={false}
           isHome={false}
         />

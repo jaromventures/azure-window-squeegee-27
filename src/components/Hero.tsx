@@ -16,7 +16,7 @@ const Hero: React.FC<HeroProps> = ({
   title = "Crystal Clear Views, Every Time",
   subtitle = "Professional window cleaning services in Lake Tahoe for residential and commercial properties",
   showCta = true,
-  backgroundImage = "https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3506&q=80",
+  backgroundImage = "https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=7360&q=80",
   isHome = true,
 }) => {
   const parallaxRef = useRef<HTMLDivElement>(null);
