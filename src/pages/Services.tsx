@@ -30,7 +30,7 @@ const Services = () => {
       title: "Commercial Window Cleaning",
       description: "Professional window cleaning services for businesses of all sizes, from small offices to large commercial buildings.",
       icon: <Building size={32} />,
-      imageSrc: "https://images.unsplash.com/photo-1433086966358-54859d0ed716",
+      imageSrc: "/lovable-uploads/17befe3f-3bca-4571-a21a-7a146a7b455d.png",
       link: "/booking",
       details: [
         "Regular maintenance contracts",
@@ -58,7 +58,7 @@ const Services = () => {
       title: "Gutter Cleaning",
       description: "Prevent water damage and maintain your home's integrity with our thorough gutter cleaning service.",
       icon: <Wind size={32} />,
-      imageSrc: "https://images.unsplash.com/photo-1433086966358-54859d0ed716",
+      imageSrc: "/lovable-uploads/17befe3f-3bca-4571-a21a-7a146a7b455d.png",
       link: "/booking",
       details: [
         "Removal of leaves and debris",
@@ -83,7 +83,7 @@ const Services = () => {
           isHome={false}
         />
         
-        <section className="section-padding bg-white">
+        <section className="section-padding bg-gradient-to-b from-white to-gray-50">
           <div className="container mx-auto">
             <div className="text-center max-w-3xl mx-auto mb-16">
               <h2 className="text-3xl md:text-4xl font-bold mb-4 text-tahoe-dark">Our Window Cleaning Services</h2>
@@ -114,8 +114,8 @@ const Services = () => {
           </div>
         </section>
         
-        {/* Service Details */}
-        <section className="section-padding bg-gray-50">
+        {/* Service Details with glass morphism */}
+        <section className="section-padding bg-gradient-to-b from-gray-50 to-white">
           <div className="container mx-auto">
             {services.map((service, index) => (
               <motion.div 
@@ -129,34 +129,38 @@ const Services = () => {
                 transition={{ duration: 0.5 }}
               >
                 <div className={`md:w-1/2 ${index % 2 === 1 ? 'md:order-2' : ''}`}>
-                  <h3 className="text-2xl font-bold mb-4 text-tahoe-dark">{service.title}</h3>
-                  <p className="text-gray-600 mb-6">{service.description}</p>
-                  
-                  <ul className="space-y-3 mb-6">
-                    {service.details.map((detail, i) => (
-                      <li key={i} className="flex items-start gap-2">
-                        <Check className="h-5 w-5 text-tahoe flex-shrink-0 mt-0.5" />
-                        <span>{detail}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  
-                  <Button 
-                    asChild
-                    className="bg-tahoe hover:bg-tahoe-deep"
-                  >
-                    <Link to="/booking" className="flex items-center gap-2">
-                      Book {service.title} <ArrowRight className="h-4 w-4" />
-                    </Link>
-                  </Button>
+                  <div className="backdrop-blur-md bg-white/70 p-8 rounded-3xl shadow-lg border border-white/80">
+                    <h3 className="text-2xl font-bold mb-4 text-tahoe-dark">{service.title}</h3>
+                    <p className="text-gray-600 mb-6">{service.description}</p>
+                    
+                    <ul className="space-y-3 mb-6">
+                      {service.details.map((detail, i) => (
+                        <li key={i} className="flex items-start gap-2">
+                          <Check className="h-5 w-5 text-tahoe flex-shrink-0 mt-0.5" />
+                          <span>{detail}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    
+                    <Button 
+                      asChild
+                      className="bg-tahoe/90 hover:bg-tahoe-deep backdrop-blur-sm"
+                    >
+                      <Link to="/booking" className="flex items-center gap-2">
+                        Book {service.title} <ArrowRight className="h-4 w-4" />
+                      </Link>
+                    </Button>
+                  </div>
                 </div>
                 
                 <div className={`md:w-1/2 ${index % 2 === 1 ? 'md:order-1' : ''}`}>
-                  <img 
-                    src={service.imageSrc} 
-                    alt={service.title} 
-                    className="rounded-2xl shadow-lg w-full h-[350px] object-cover" 
-                  />
+                  <div className="overflow-hidden rounded-3xl shadow-xl">
+                    <img 
+                      src={service.imageSrc} 
+                      alt={service.title} 
+                      className="w-full h-[350px] object-cover hover:scale-105 transition-transform duration-700" 
+                    />
+                  </div>
                 </div>
               </motion.div>
             ))}
@@ -164,20 +168,22 @@ const Services = () => {
         </section>
         
         {/* CTA Section */}
-        <section className="section-padding tahoe-gradient text-white">
+        <section className="section-padding bg-gradient-to-r from-tahoe to-tahoe-deep text-white">
           <div className="container mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Get Started?</h2>
-            <p className="text-white/90 text-lg mb-8 max-w-2xl mx-auto">
-              Schedule your professional window cleaning service today and experience the Big Blue difference. We serve the entire Lake Tahoe area.
-            </p>
-            <Button 
-              asChild
-              variant="outline" 
-              size="lg" 
-              className="border-white text-white hover:bg-white/10 px-8 py-6 text-lg font-medium transition-all"
-            >
-              <Link to="/booking">Book Your Service Now</Link>
-            </Button>
+            <div className="backdrop-blur-md bg-white/10 p-10 rounded-3xl max-w-4xl mx-auto border border-white/20">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Get Started?</h2>
+              <p className="text-white/90 text-lg mb-8 max-w-2xl mx-auto">
+                Schedule your professional window cleaning service today and experience the Big Blue difference. We serve the entire Lake Tahoe area.
+              </p>
+              <Button 
+                asChild
+                variant="outline" 
+                size="lg" 
+                className="border-white/50 bg-white/10 text-white hover:bg-white/20 px-8 py-6 text-lg font-medium transition-all"
+              >
+                <Link to="/booking">Book Your Service Now</Link>
+              </Button>
+            </div>
           </div>
         </section>
         

@@ -56,7 +56,7 @@ const Hero: React.FC<HeroProps> = ({
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="max-w-4xl mx-auto"
+          className="max-w-4xl mx-auto backdrop-blur-sm bg-white/10 p-8 md:p-12 rounded-3xl"
         >
           <motion.h1 
             className="text-4xl md:text-5xl lg:text-7xl font-bold text-white mb-6"
@@ -86,7 +86,7 @@ const Hero: React.FC<HeroProps> = ({
               <Button 
                 asChild
                 size="lg" 
-                className="bg-tahoe hover:bg-tahoe-deep text-white px-8 py-6 text-lg font-medium transition-all duration-300 transform hover:scale-105"
+                className="bg-tahoe/80 backdrop-blur-sm hover:bg-tahoe-deep text-white px-8 py-6 text-lg font-medium transition-all duration-300 transform hover:scale-105"
               >
                 <Link to="/booking">Book Now</Link>
               </Button>
@@ -94,7 +94,7 @@ const Hero: React.FC<HeroProps> = ({
                 asChild
                 variant="outline" 
                 size="lg" 
-                className="border-white text-white hover:bg-white/10 px-8 py-6 text-lg font-medium transition-all duration-300"
+                className="border-white/50 bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 px-8 py-6 text-lg font-medium transition-all duration-300"
               >
                 <Link to="/services">Our Services</Link>
               </Button>

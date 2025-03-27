@@ -147,22 +147,24 @@ const BookingCalendar: React.FC = () => {
             transition={{ duration: 0.3 }}
             className="space-y-6"
           >
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              <div className="w-full overflow-auto">
                 <Label className="text-base font-medium mb-3 block">Select Date</Label>
-                <Calendar
-                  mode="single"
-                  selected={date}
-                  onSelect={setDate}
-                  disabled={disabledDays}
-                  className="rounded-md border"
-                  initialFocus
-                />
+                <div className="calendar-container w-full flex justify-center">
+                  <Calendar
+                    mode="single"
+                    selected={date}
+                    onSelect={setDate}
+                    disabled={disabledDays}
+                    className="rounded-md border bg-white shadow-sm max-w-full pointer-events-auto"
+                    initialFocus
+                  />
+                </div>
               </div>
               
               <div>
                 <Label className="text-base font-medium mb-3 block">Select Time</Label>
-                <div className="grid grid-cols-2 gap-2 mt-2">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-2">
                   {timeSlots.map((time) => (
                     <Button
                       key={time}
@@ -470,10 +472,10 @@ const BookingCalendar: React.FC = () => {
   };
 
   return (
-    <div className="w-full max-w-4xl mx-auto p-6">
+    <div className="w-full max-w-4xl mx-auto p-4 md:p-6">
       {renderStepIndicator()}
       
-      <div className="bg-white rounded-xl shadow-lg p-6 mb-6">
+      <div className="backdrop-blur-md bg-white/80 rounded-xl shadow-lg p-6 mb-6 border border-white/50">
         <div className="flex justify-between items-center mb-6">
           <h2 className="text-2xl font-bold text-tahoe-dark">
             {step === 1 && 'Select Date & Time'}

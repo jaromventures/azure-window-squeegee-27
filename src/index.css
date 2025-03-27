@@ -89,11 +89,23 @@
   }
 
   .glass {
-    @apply bg-white/70 backdrop-blur-md border border-white/20 shadow-md;
+    @apply bg-white/70 backdrop-blur-md border border-white/20 shadow-md rounded-2xl;
   }
 
   .glass-dark {
-    @apply bg-black/20 backdrop-blur-md border border-white/10 shadow-md;
+    @apply bg-black/20 backdrop-blur-md border border-white/10 shadow-md rounded-2xl;
+  }
+
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-md border border-white/50 shadow-lg rounded-3xl;
+  }
+
+  .glass-blue {
+    @apply bg-tahoe/10 backdrop-blur-md border border-tahoe/20 shadow-md rounded-2xl;
+  }
+
+  .apple-gradient {
+    background: linear-gradient(180deg, rgba(255,255,255,0.9) 0%, rgba(240,247,255,0.9) 100%);
   }
 
   .tahoe-shadow {
@@ -144,5 +156,14 @@
       transform: scale(4);
       opacity: 0;
     }
+  }
+
+  /* Fix calendar container */
+  .calendar-container .rdp {
+    margin: 0;
+  }
+
+  .calendar-container .rdp-months {
+    justify-content: center;
   }
 }

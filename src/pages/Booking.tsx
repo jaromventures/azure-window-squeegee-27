@@ -20,7 +20,7 @@ const Booking = () => {
           isHome={false}
         />
         
-        <section className="section-padding bg-white">
+        <section className="section-padding bg-gradient-to-b from-white to-gray-50">
           <div className="container mx-auto">
             <div className="text-center max-w-3xl mx-auto mb-12">
               <h2 className="text-3xl font-bold mb-4 text-tahoe-dark">Schedule Your Window Cleaning</h2>
