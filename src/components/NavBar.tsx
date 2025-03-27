@@ -33,26 +33,29 @@ const NavBar: React.FC = () => {
     { name: 'Contact', path: '/contact', icon: <Phone className="h-4 w-4" /> },
   ];
 
+  const activeNavClass = "relative text-tahoe-dark font-medium before:absolute before:bottom-0 before:left-0 before:w-full before:h-0.5 before:bg-tahoe";
+  const inactiveNavClass = "text-gray-600 hover:text-tahoe-dark transition-colors";
+
   return (
     <header 
       className={cn(
-        'fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-in-out',
-        isScrolled ? 'glass py-3 backdrop-blur-xl bg-white/80 border-b border-white/20' : 'py-5 bg-transparent'
+        'fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out',
+        isScrolled ? 'glass py-3 tahoe-shadow' : 'py-5 bg-transparent'
       )}
     >
-      <div className="container mx-auto flex justify-between items-center px-4 md:px-8">
+      <div className="container mx-auto flex justify-between items-center px-4 md:px-6">
         <Link to="/" className="z-10">
           <Logo color={isScrolled || isMobileMenuOpen ? 'dark' : 'white'} />
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex space-x-10 items-center">
+        <nav className="hidden md:flex space-x-8 items-center">
           {navLinks.map((link, index) => (
             <React.Fragment key={link.name}>
               {link.name === 'Book Now' ? (
                 <Button
                   asChild
-                  className="apple-button bg-tahoe/90 hover:bg-tahoe text-white border-tahoe/20 shadow-apple-blue"
+                  className="bg-tahoe hover:bg-tahoe-deep transition-all duration-300"
                 >
                   <Link to={link.path} className="font-medium">
                     {link.name}
@@ -62,18 +65,16 @@ const NavBar: React.FC = () => {
                 <Link
                   to={link.path}
                   className={cn(
-                    'relative py-2 transition-colors duration-300 font-medium',
-                    isScrolled 
-                      ? (location.pathname === link.path ? 'text-tahoe-dark' : 'text-gray-600 hover:text-tahoe-dark')
-                      : (location.pathname === link.path ? 'text-white' : 'text-white/80 hover:text-white')
+                    'relative py-2 transition-colors duration-300',
+                    location.pathname === link.path ? activeNavClass : inactiveNavClass
                   )}
                 >
                   {link.name}
                   {location.pathname === link.path && (
                     <motion.div 
                       layoutId="nav-underline"
-                      className={`absolute -bottom-1 left-0 w-full h-0.5 ${isScrolled ? 'bg-tahoe' : 'bg-white'}`}
-                      transition={{ duration: 0.3, ease: "easeInOut" }}
+                      className="absolute -bottom-1 left-0 w-full h-0.5 bg-tahoe"
+                      transition={{ duration: 0.3 }}
                     />
                   )}
                 </Link>
@@ -99,53 +100,34 @@ const NavBar: React.FC = () => {
         <AnimatePresence>
           {isMobileMenuOpen && (
             <motion.div
-              initial={{ opacity: 0, backdropFilter: 'blur(0px)' }}
-              animate={{ opacity: 1, backdropFilter: 'blur(20px)' }}
-              exit={{ opacity: 0, backdropFilter: 'blur(0px)' }}
-              transition={{ duration: 0.4 }}
-              className="fixed inset-0 top-0 bg-black/50 md:hidden z-0 flex flex-col justify-center"
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.3 }}
+              className="fixed inset-0 top-0 glass-dark md:hidden z-0 flex flex-col justify-center"
             >
-              <motion.div 
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: 20 }}
-                transition={{ duration: 0.3, delay: 0.1 }}
-                className="flex flex-col items-center space-y-6 p-6 mt-16 backdrop-blur-xl bg-white/10 mx-6 rounded-3xl border border-white/20"
-              >
-                {navLinks.map((link, index) => (
-                  <motion.div
+              <div className="flex flex-col items-center space-y-6 p-6 mt-16">
+                {navLinks.map((link) => (
+                  <Link
                     key={link.name}
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.3, delay: 0.1 + index * 0.1 }}
+                    to={link.path}
+                    className={cn(
+                      'text-white text-xl font-light py-2 px-4 flex items-center gap-2',
+                      location.pathname === link.path && 'text-tahoe-medium font-normal'
+                    )}
                   >
-                    <Link
-                      to={link.path}
-                      className={cn(
-                        'text-white text-xl font-light py-2 px-4 flex items-center gap-2',
-                        location.pathname === link.path && 'text-tahoe-medium font-normal'
-                      )}
-                    >
-                      {link.icon}
-                      {link.name}
-                    </Link>
-                  </motion.div>
+                    {link.icon}
+                    {link.name}
+                  </Link>
                 ))}
-                <motion.div
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.3, delay: 0.5 }}
-                  className="mt-4 w-full"
+                <Button
+                  asChild
+                  size="lg"
+                  className="mt-6 w-full max-w-xs bg-tahoe hover:bg-tahoe-deep"
                 >
-                  <Button
-                    asChild
-                    size="lg"
-                    className="apple-button bg-tahoe/90 hover:bg-tahoe text-white border-tahoe/20 w-full shadow-apple-blue"
-                  >
-                    <Link to="/booking">Book Now</Link>
-                  </Button>
-                </motion.div>
-              </motion.div>
+                  <Link to="/booking">Book Now</Link>
+                </Button>
+              </div>
             </motion.div>
           )}
         </AnimatePresence>

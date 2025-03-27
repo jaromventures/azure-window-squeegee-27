@@ -35,7 +35,7 @@
     --input: 214.3 31.8% 91.4%;
     --ring: 222.2 84% 4.9%;
 
-    --radius: 1rem;
+    --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -85,53 +85,39 @@
 
   body {
     @apply bg-background text-foreground font-sans scroll-smooth;
-    font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-medium tracking-tight;
+    font-family: 'Inter', sans-serif;
   }
 
   .glass {
-    @apply bg-white/70 backdrop-blur-lg border border-white/30 shadow-apple rounded-2xl;
+    @apply bg-white/70 backdrop-blur-md border border-white/20 shadow-md rounded-2xl;
   }
 
   .glass-dark {
-    @apply bg-black/30 backdrop-blur-lg border border-white/10 shadow-md rounded-2xl;
+    @apply bg-black/20 backdrop-blur-md border border-white/10 shadow-md rounded-2xl;
   }
 
   .glass-card {
-    @apply bg-white/80 backdrop-blur-lg border border-white/40 shadow-apple rounded-3xl;
+    @apply bg-white/80 backdrop-blur-md border border-white/50 shadow-lg rounded-3xl;
   }
 
   .glass-blue {
-    @apply bg-tahoe/20 backdrop-blur-lg border border-tahoe/30 shadow-apple-blue rounded-2xl;
+    @apply bg-tahoe/10 backdrop-blur-md border border-tahoe/20 shadow-md rounded-2xl;
   }
 
   .apple-gradient {
-    background: linear-gradient(180deg, rgba(255,255,255,0.95) 0%, rgba(240,247,255,0.95) 100%);
+    background: linear-gradient(180deg, rgba(255,255,255,0.9) 0%, rgba(240,247,255,0.9) 100%);
   }
 
   .tahoe-shadow {
-    box-shadow: 0 8px 30px -10px rgba(3, 105, 161, 0.3);
+    box-shadow: 0 10px 30px -10px rgba(3, 105, 161, 0.3);
   }
 
   .tahoe-gradient {
     background: linear-gradient(135deg, #0EA5E9 0%, #0369A1 100%);
   }
 
-  .particle {
-    position: absolute;
-    border-radius: 50%;
-    background: rgba(14, 165, 233, 0.5);
-    pointer-events: none;
-    transform-origin: center center;
-  }
-
   .section-padding {
-    @apply py-20 md:py-28 px-6 md:px-8 lg:px-12;
+    @apply py-16 md:py-24 px-6 md:px-8 lg:px-12;
   }
 
   /* Page transition effect */
@@ -172,19 +158,6 @@
     }
   }
 
-  /* Apple-style button */
-  .apple-button {
-    @apply relative overflow-hidden rounded-full bg-white/80 backdrop-blur-md text-tahoe-dark font-medium px-6 py-3 shadow-apple transition-all duration-300;
-  }
-  
-  .apple-button:hover {
-    @apply shadow-apple-hover bg-white transform scale-[1.02];
-  }
-  
-  .apple-button:active {
-    @apply transform scale-[0.98];
-  }
-
   /* Fix calendar container */
   .calendar-container .rdp {
     margin: 0;
@@ -192,5 +165,30 @@
 
   .calendar-container .rdp-months {
     justify-content: center;
+  }
+  
+  /* New styles inspired by Apple design */
+  .apple-blur {
+    @apply backdrop-blur-xl bg-white/80 border border-white/30 shadow-md;
+  }
+  
+  .floating-card {
+    @apply transition-all duration-300 hover:translate-y-[-5px] hover:shadow-lg;
+  }
+  
+  .blur-panel {
+    @apply bg-white/40 backdrop-blur-md border border-white/30 shadow-sm;
+  }
+  
+  .glow-text {
+    text-shadow: 0 0 15px rgba(14, 165, 233, 0.5);
+  }
+  
+  .apple-button {
+    @apply rounded-full bg-tahoe px-6 py-3 text-white font-medium transition-all duration-300 hover:shadow-md hover:bg-tahoe-deep;
+  }
+  
+  .soft-shadow {
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
   }
 }
