@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Hero from '@/components/Hero';
 import PricingCalculator from '@/components/PricingCalculator';
@@ -39,7 +38,7 @@ const Index = () => {
               title="Residential Window Cleaning"
               description="Elevate your home's appearance and let natural light shine through with our thorough residential window cleaning service."
               icon={<Home size={32} />}
-              imageSrc="https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3648&q=80"
+              imageSrc="/lovable-uploads/17befe3f-3bca-4571-a21a-7a146a7b455d.png"
               link="/services"
             />
             
@@ -47,7 +46,7 @@ const Index = () => {
               title="Commercial Window Cleaning"
               description="Make a lasting impression on clients and create a bright workspace for employees with pristine, professionally cleaned windows."
               icon={<Building size={32} />}
-              imageSrc="https://images.unsplash.com/photo-1483058712412-4245e9b90334?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=5760&q=80"
+              imageSrc="https://images.unsplash.com/photo-1433086966358-54859d0ed716"
               link="/services"
             />
           </div>

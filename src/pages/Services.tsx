@@ -16,7 +16,7 @@ const Services = () => {
       title: "Residential Window Cleaning",
       description: "Comprehensive window cleaning for homes of all sizes, from cozy cabins to lakefront estates.",
       icon: <Home size={32} />,
-      imageSrc: "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3648&q=80",
+      imageSrc: "/lovable-uploads/17befe3f-3bca-4571-a21a-7a146a7b455d.png",
       link: "/booking",
       details: [
         "Interior and exterior window cleaning",
@@ -30,7 +30,7 @@ const Services = () => {
       title: "Commercial Window Cleaning",
       description: "Professional window cleaning services for businesses of all sizes, from small offices to large commercial buildings.",
       icon: <Building size={32} />,
-      imageSrc: "https://images.unsplash.com/photo-1504893524553-b855bce32c67?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3873&q=80",
+      imageSrc: "https://images.unsplash.com/photo-1433086966358-54859d0ed716",
       link: "/booking",
       details: [
         "Regular maintenance contracts",
@@ -44,7 +44,7 @@ const Services = () => {
       title: "Pressure Washing",
       description: "Refresh your property's exterior surfaces with our professional pressure washing services.",
       icon: <Droplets size={32} />,
-      imageSrc: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=7360&q=80",
+      imageSrc: "/lovable-uploads/17befe3f-3bca-4571-a21a-7a146a7b455d.png",
       link: "/booking",
       details: [
         "Deck and patio cleaning",
@@ -58,7 +58,7 @@ const Services = () => {
       title: "Gutter Cleaning",
       description: "Prevent water damage and maintain your home's integrity with our thorough gutter cleaning service.",
       icon: <Wind size={32} />,
-      imageSrc: "https://images.unsplash.com/photo-1504893524553-b855bce32c67?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3873&q=80",
+      imageSrc: "https://images.unsplash.com/photo-1433086966358-54859d0ed716",
       link: "/booking",
       details: [
         "Removal of leaves and debris",
@@ -78,7 +78,7 @@ const Services = () => {
         <Hero 
           title="Our Services" 
           subtitle="Professional window cleaning and exterior maintenance services for the Lake Tahoe area" 
-          backgroundImage="https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=7360&q=80"
+          backgroundImage="/lovable-uploads/17befe3f-3bca-4571-a21a-7a146a7b455d.png"
           showCta={false}
           isHome={false}
         />
