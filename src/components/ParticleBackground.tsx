@@ -56,8 +56,12 @@ const ParticleBackground: React.FC = () => {
           particle.x, particle.y, 0,
           particle.x, particle.y, particle.size * 2
         );
-        gradient.addColorStop(0, particle.color.replace(')', `, ${particle.opacity})`));
-        gradient.addColorStop(1, particle.color.replace(')', ', 0)'));
+        
+        // Fix: Properly format the color strings for the gradient
+        // Extract the base color without the opacity
+        const colorBase = particle.color.substring(0, particle.color.lastIndexOf(","));
+        gradient.addColorStop(0, `${colorBase}, ${particle.opacity})`);
+        gradient.addColorStop(1, `${colorBase}, 0)`);
         
         ctx.fillStyle = gradient;
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
