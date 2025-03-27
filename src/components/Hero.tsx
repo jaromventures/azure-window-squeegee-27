@@ -48,7 +48,7 @@ const Hero: React.FC<HeroProps> = ({
       />
       
       {/* Overlay gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/20 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-transparent" />
       
       {/* Content container */}
       <div className="relative h-full flex flex-col justify-center items-center text-center px-6 md:px-12 z-10">
@@ -56,10 +56,10 @@ const Hero: React.FC<HeroProps> = ({
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="max-w-4xl mx-auto apple-blur bg-white/10 p-8 md:p-12 rounded-3xl"
+          className="max-w-4xl mx-auto backdrop-blur-sm bg-white/10 p-8 md:p-12 rounded-3xl"
         >
           <motion.h1 
-            className="text-4xl md:text-5xl lg:text-7xl font-bold text-white mb-6 glow-text"
+            className="text-4xl md:text-5xl lg:text-7xl font-bold text-white mb-6"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
@@ -86,7 +86,7 @@ const Hero: React.FC<HeroProps> = ({
               <Button 
                 asChild
                 size="lg" 
-                className="bg-tahoe/90 backdrop-blur-sm hover:bg-tahoe-deep text-white px-8 py-6 text-lg font-medium transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
+                className="bg-tahoe/80 backdrop-blur-sm hover:bg-tahoe-deep text-white px-8 py-6 text-lg font-medium transition-all duration-300 transform hover:scale-105"
               >
                 <Link to="/booking">Book Now</Link>
               </Button>
@@ -94,7 +94,7 @@ const Hero: React.FC<HeroProps> = ({
                 asChild
                 variant="outline" 
                 size="lg" 
-                className="border-white/60 bg-white/20 backdrop-blur-sm text-white hover:bg-white/30 px-8 py-6 text-lg font-medium transition-all duration-300"
+                className="border-white/50 bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 px-8 py-6 text-lg font-medium transition-all duration-300"
               >
                 <Link to="/services">Our Services</Link>
               </Button>
@@ -112,7 +112,7 @@ const Hero: React.FC<HeroProps> = ({
           >
             <p className="text-white/80 text-sm mb-2">Scroll to explore</p>
             <motion.div 
-              className="w-6 h-10 border-2 border-white/70 rounded-full flex justify-center p-1"
+              className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center p-1"
               initial={{ y: 0 }}
               animate={{ y: [0, 10, 0] }}
               transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}

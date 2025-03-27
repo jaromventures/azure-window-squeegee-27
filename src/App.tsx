@@ -10,14 +10,12 @@ import Booking from "./pages/Booking";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import { AnimatePresence } from "framer-motion";
-import ParticleBackground from "./components/ParticleBackground";
 
 const queryClient = new QueryClient();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
-      <ParticleBackground />
       <Toaster />
       <Sonner />
       <BrowserRouter>
