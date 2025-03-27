@@ -50,7 +50,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
           }}
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-tahoe-dark/60 to-tahoe-dark/90 backdrop-filter backdrop-blur-[2px]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-tahoe-dark/50 to-tahoe-dark/80 backdrop-filter backdrop-blur-[4px]" />
       </div>
 
       {/* Content */}
@@ -89,7 +89,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
           <Button 
             asChild
             variant="outline" 
-            className="mt-auto border-white/30 bg-transparent text-white hover:bg-white/10 hover:border-white transition-all duration-300 group"
+            className="mt-auto border-white/30 bg-white/10 backdrop-blur-md text-white hover:bg-white/20 hover:border-white transition-all duration-300 group"
           >
             <Link to={link} className="flex items-center gap-1">
               Learn More 

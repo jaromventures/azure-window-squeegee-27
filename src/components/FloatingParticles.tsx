@@ -40,9 +40,9 @@ const FloatingParticles: React.FC<FloatingParticlesProps> = ({
         x: Math.random() * width,
         y: Math.random() * height,
         size: minSize + Math.random() * (maxSize - minSize),
-        speedX: (Math.random() - 0.5) * speed,
-        speedY: (Math.random() - 0.5) * speed,
-        opacity: 0.1 + Math.random() * 0.4,
+        speedX: (Math.random() - 0.5) * speed * 1.5, // Increased speed
+        speedY: (Math.random() - 0.5) * speed * 1.5, // Increased speed
+        opacity: 0.2 + Math.random() * 0.6, // Increased opacity range
         hue: 195 + Math.floor(Math.random() * 20), // Tahoe blue hue range
       }));
     };
@@ -59,8 +59,8 @@ const FloatingParticles: React.FC<FloatingParticlesProps> = ({
 
       // Update each particle position
       particlesRef.current.forEach(particle => {
-        particle.x += particle.speedX * deltaTime * 0.05;
-        particle.y += particle.speedY * deltaTime * 0.05;
+        particle.x += particle.speedX * deltaTime * 0.08; // Increased movement speed
+        particle.y += particle.speedY * deltaTime * 0.08; // Increased movement speed
 
         // Wrap around the edges
         if (particle.x < 0) particle.x = width;
@@ -94,7 +94,7 @@ const FloatingParticles: React.FC<FloatingParticlesProps> = ({
         element.style.top = `${particle.y}px`;
         element.style.opacity = particle.opacity.toString();
         element.style.background = `hsla(${particle.hue}, 96%, 50%, ${particle.opacity})`;
-        element.style.boxShadow = `0 0 ${particle.size * 2}px hsla(${particle.hue}, 96%, 70%, ${particle.opacity})`;
+        element.style.boxShadow = `0 0 ${particle.size * 3}px hsla(${particle.hue}, 96%, 70%, ${particle.opacity * 1.2})`; // Enhanced glow
         containerRef.current?.appendChild(element);
       });
     };

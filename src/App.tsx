@@ -31,7 +31,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <FloatingParticles count={40} minSize={1} maxSize={5} speed={0.3} />
+      <FloatingParticles count={50} minSize={2} maxSize={7} speed={0.5} />
       <BrowserRouter>
         <RouteChangeAnimator>
           <Route path="/" element={<Index />} />

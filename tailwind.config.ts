@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -94,8 +93,8 @@ export default {
 					"50%": { transform: "translateY(-10px)" },
 				},
 				"pulse-glow": {
-					"0%, 100%": { opacity: "0.4", transform: "scale(1)" },
-					"50%": { opacity: "0.8", transform: "scale(1.05)" },
+					"0%, 100%": { opacity: "0.5", transform: "scale(1)" },
+					"50%": { opacity: "0.9", transform: "scale(1.08)" },
 				},
 				"fade-in-up": {
 					"0%": { opacity: "0", transform: "translateY(20px)" },
@@ -114,15 +113,15 @@ export default {
 				"accordion-down": "accordion-down 0.2s ease-out",
 				"accordion-up": "accordion-up 0.2s ease-out",
 				"float": "float 6s ease-in-out infinite",
-				"pulse-glow": "pulse-glow 4s ease-in-out infinite",
+				"pulse-glow": "pulse-glow 3s ease-in-out infinite",
 				"fade-in-up": "fade-in-up 0.6s ease-out",
 				"fade-in": "fade-in 0.8s ease-out",
 				"blur-in": "blur-in 0.8s ease-out",
 			},
 			boxShadow: {
-				'apple': '0 4px 30px rgba(0, 0, 0, 0.1)',
-				'apple-hover': '0 10px 30px rgba(0, 0, 0, 0.15)',
-				'apple-blue': '0 4px 30px rgba(14, 165, 233, 0.15)',
+				'apple': '0 6px 30px rgba(0, 0, 0, 0.15)',
+				'apple-hover': '0 12px 40px rgba(0, 0, 0, 0.2)',
+				'apple-blue': '0 6px 30px rgba(14, 165, 233, 0.25)',
 			},
 		},
 	},

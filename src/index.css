@@ -95,19 +95,19 @@
   }
 
   .glass {
-    @apply bg-white/80 backdrop-blur-md border border-white/20 shadow-apple rounded-2xl;
+    @apply bg-white/70 backdrop-blur-lg border border-white/30 shadow-apple rounded-2xl;
   }
 
   .glass-dark {
-    @apply bg-black/20 backdrop-blur-md border border-white/10 shadow-md rounded-2xl;
+    @apply bg-black/30 backdrop-blur-lg border border-white/10 shadow-md rounded-2xl;
   }
 
   .glass-card {
-    @apply bg-white/90 backdrop-blur-md border border-white/50 shadow-apple rounded-3xl;
+    @apply bg-white/80 backdrop-blur-lg border border-white/40 shadow-apple rounded-3xl;
   }
 
   .glass-blue {
-    @apply bg-tahoe/10 backdrop-blur-md border border-tahoe/20 shadow-apple-blue rounded-2xl;
+    @apply bg-tahoe/20 backdrop-blur-lg border border-tahoe/30 shadow-apple-blue rounded-2xl;
   }
 
   .apple-gradient {
@@ -115,7 +115,7 @@
   }
 
   .tahoe-shadow {
-    box-shadow: 0 8px 30px -10px rgba(3, 105, 161, 0.2);
+    box-shadow: 0 8px 30px -10px rgba(3, 105, 161, 0.3);
   }
 
   .tahoe-gradient {
@@ -125,7 +125,7 @@
   .particle {
     position: absolute;
     border-radius: 50%;
-    background: rgba(14, 165, 233, 0.4);
+    background: rgba(14, 165, 233, 0.5);
     pointer-events: none;
     transform-origin: center center;
   }
@@ -174,7 +174,7 @@
 
   /* Apple-style button */
   .apple-button {
-    @apply relative overflow-hidden rounded-full bg-white/90 text-tahoe-dark font-medium px-6 py-3 shadow-apple transition-all duration-300;
+    @apply relative overflow-hidden rounded-full bg-white/80 backdrop-blur-md text-tahoe-dark font-medium px-6 py-3 shadow-apple transition-all duration-300;
   }
   
   .apple-button:hover {
